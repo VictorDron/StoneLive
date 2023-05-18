@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    height: 40px;
+    border-radius: 10px;
+    border: 3px solid #5ad15a;
+    margin-top: 1%;
+    margin-bottom: 2%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+}
+
+nav h1 {
+    color: #5ad15a;
+    font-size: 30px;
+}
+
+.init {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 230px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 1%;
+    /* border: 1px solid #d15a5a;  */
+}
+
+.init .data1{
+
+    margin-bottom: 20px;
+} 
+.init .data1,
+.init .data2 {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid #d15a5a; */    
+}
+
+.init .data1 .resume,
+.init .data2 .resume {
+    flex-grow: 1; /* Permite que as divs se expandam uniformemente */
+    flex-basis: 0; /* Redefine a largura base para 0 */
+    border-radius: 10px;
+    border: 1px solid #5ad15a;
+    
+}
+
+.init .data1 .resume + .resume,
+.init .data2 .resume + .resume {
+    margin-left: 10px; /* Espaço entre as divs .resume */
+}
+.init .data1 .resume .title{
+    flex: 50%;
+    width: 100%;
+    height: 20%;
+    border-bottom: 1px solid #5ad15a;
+
+}
+
+.init .data2 .resume .title{
+    flex: 50%;
+    width: 100%;
+    height: 20%;
+    border-bottom: 1px solid #5ad15a;
+
+}
+.init .data1 .resume .title h1,
+.init .data2 .resume .title h1{
+
+     font-size: 15px;
+     text-align: center;
+     margin-top: 5px;
+     color: #5ad15a;
+}
+
+.init .data1 .resume .return{
+      
+   color: #5ad15a;
+   font-size: 30px;
+   text-align: center;
+   margin-top: 8%;
+
+}
+
+.init .data2 .resume .return{    
+    color: #5ad15a;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 8%;
+
+ }
+
+ .chart1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 250px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 1%;
+    border-radius: 10px;
+    border: 1px solid #5ad15a;
+}
+
+.chart1 #sortedDates,
+.chart1 #baseCountsByDate {
+    flex: 50%;
+    height: 100%;
+    margin-bottom: 10px; /* Adicione a margem inferior desejada entre os gráficos */
+}
+
+#chart1 canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+#titlechart2 {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 1%;
+    color: #5ad15a;
+    /* border: 1px solid #d15a5a;  */
+}
+
+#chart2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: auto;
+    width: 80%;
+    height: 200px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 1%;
+    border-radius: 10px;
+    border: 1px solid #5ad15a; 
+}
+
+
+#chart2 canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+#chart2 .labels {
+    display: flex;
+}
+
+
+.chart2 h1 {
+
+    font-size: 10px;
+
+}
+
+.chart3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 200px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 0%;
+    border: 1px solid #d15a5a; 
+
+}
+
+.data3 {
+
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    height: 100px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 1%;
+    /* border: 1px solid #5ad15a;  */
+}
+
+.data3 .resume1{
+   
+    flex-grow: 2; /* Permite que as divs se expandam uniformemente */
+    flex-basis: 0; /* Redefine a largura base para 0 */
+    border-radius: 10px;
+    margin: 0.5%;
+    border: 1px solid #5ad15a;
+
+}
+
+.data3 .resume1 .title1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 30%;
+    border-bottom:1px solid #5ad15a; 
+}
+
+.data3 .resume1 .title1 h1 {
+
+    color: #5ad15a;
+    font-size: 15px;
+    text-align: center;
+}
+
+.data3 .resume1  .return1 {
+
+   color: #5ad15a;
+   font-size: 30px;
+   margin-top: 2%;
+   text-align: center;
+}
+
+
+
+
+
+
