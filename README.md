@@ -1,0 +1,7 @@
+O projeto StoneLive é um painel de visualização de dados em tempo real que tem como objetivo fornecer uma visão abrangente e atualizada das informações importantes para análise. O painel foi desenvolvido para apresentar métricas relevantes e permitir que os usuários acompanhem o desempenho de determinadas variáveis em um formato visualmente atraente.
+
+Utilizando tecnologias web como HTML, CSS e JavaScript, juntamente com a biblioteca Chart.js para renderização de gráficos interativos, o StoneLive oferece uma interface intuitiva para explorar os dados. O painel é responsivo, adaptando-se a diferentes dispositivos e tamanhos de tela, permitindo que os usuários acessem as informações de forma conveniente.
+
+O projeto foi desenvolvido com foco na clareza e facilidade de uso. Os gráficos e elementos visuais foram cuidadosamente projetados para transmitir informações de maneira eficaz, permitindo que os usuários identifiquem tendências, padrões e insights importantes. Além disso, o painel oferece recursos de interatividade, permitindo que os usuários personalizem a exibição dos dados de acordo com suas necessidades e preferências.
+
+O StoneLive visa proporcionar uma experiência de usuário agradável ao apresentar os dados relevantes de forma visualmente atraente e compreensível. Seu objetivo principal é facilitar a análise e interpretação dos dados, fornecendo informações valiosas para tomada de decisões informadas.
