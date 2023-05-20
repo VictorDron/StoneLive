@@ -2,26 +2,26 @@
 <html>
 <head>
     <title>Live</title>
-    <!-- Importing CSS Styles -->
+    <!-- Importando Estilos CSS -->
     <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
-    <!-- Navigation Bar -->
+    <!-- Barra de Navegação -->
     <nav>
         <h1>StoneLive</h1>
     </nav>
 
-    <!-- Initial Data -->
+    <!-- Dados Iniciais -->
     <div class="init">
-        <!-- Group 1 of Data -->
+        <!-- Grupo 1 de Dados -->
         <div class="data1">
-            <!-- Displaying Summary of Information -->
-            <!-- Total Atendimentos -->
+            <!-- Exibição Resumida das Informações -->
+            <!-- Total de Atendimentos -->
             <div class="resume">
                 <div class="title"><h1>TOTAL EM ATENDIMENTOS</h1></div>
                 <h1 class="return"><%= data.totalOccurrences %></h1>
             </div>
-            <!-- Total Dias -->
+            <!-- Total de Dias -->
             <div class="resume">
                 <div class="title"><h1>PERÍODO TOTAL EM DIAS</h1></div>
                 <h1 class="return"><%= data.totalDays %></h1>
@@ -33,33 +33,33 @@
             </div>
         </div>
         
-        <!-- Group 2 of Data -->
+        <!-- Grupo 2 de Dados -->
         <div class="data2">
             <!-- Média Diária -->
             <div class="resume">
                 <div class="title"><h1>MÉDIA DIÁRIA</h1></div>
                 <h1 class="return"><%=data.dailyAverage %></h1>
             </div>
-            <!-- Estado com maior número de ocorrências -->
+            <!-- Estado com Maior Número de Ocorrências -->
             <div class="resume">
-                <div class="title"><h1>ESTADO TOP</h1></div>
+                <div class="title"><h1>ESTADO MAIS OCORRIDO</h1></div>
                 <h1 class="return"><%=data.mostOccurredState  %></h1>
             </div>
-            <!-- Estado com menor número de ocorrências -->
+            <!-- Estado com Menor Número de Ocorrências -->
             <div class="resume">
-                <div class="title"><h1>ESTADO BOTTOM</h1></div>
+                <div class="title"><h1>ESTADO MENOS OCORRIDO</h1></div>
                 <h1 class="return"><%= data.leastOccurredState %></h1>
             </div>
         </div>
     </div>
     
-    <!-- Graphs Section -->
+    <!-- Seção de Gráficos -->
     <div class="chart1">
          <canvas id="sortedDates" style="width:80%;max-width:100%;height:400px;"></canvas>
          <canvas id="baseCountsByDate" style="width:80%;max-width:100%;height:400px;"></canvas>    
     </div>
     
-    <!-- Displaying Distribution Percentage -->
+    <!-- Exibição da Distribuição Percentual -->
     <div id="titlechart2">
         <h1 id="titleneutral" >DISTRIBUIÇÃO PERCENTUAL ESTADUAL</h1>
     </div>
@@ -67,27 +67,27 @@
         <canvas id="statePercentages" width="800" height="400"></canvas>
     </div>
      
-    <!-- More Data Display -->
+    <!-- Exibição de Mais Dados -->
     <div class="data3">
-        <!-- Total Bases -->
+        <!-- Total de Bases -->
         <div class="resume1">
             <div class="title1"><h1>TOTAL DE BASES</h1></div>
             <h1 class="return1"><%= data2.TotalBases%></h1>
         </div>
-        <!-- Total Estoque -->
+        <!-- Total de Estoque -->
         <div class="resume1">
             <div class="title1"><h1>TOTAL EM ESTOQUE</h1></div>
             <h1 class="return1"><%= data2.TotalStock%></h1>
         </div>
     </div>
     
-    <!-- Additional Graphs Section -->
+    <!-- Seção Adicional de Gráficos -->
     <div class="chart1">
         <canvas id="stateBaseCount" style="width:80%;max-width:100%;height:400px;"></canvas>
         <canvas id="stockByBase" style="width:80%;max-width:100%;height:400px;"></canvas>  
     </div>
 
-    <!-- Importing Scripts -->
+    <!-- Importando Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="/js/index.js"></script>
 </body>
