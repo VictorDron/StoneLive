@@ -1,3 +1,31 @@
+const gerarRelatorioBtn = document.getElementById('gerarRelatorioBtn');
+
+// Adiciona um evento de clique ao botão
+gerarRelatorioBtn.addEventListener('click', function() {
+  // Faz uma requisição para a rota /gerar-pdf para gerar e baixar o arquivo PDF
+  fetch('/gerar-pdf')
+    .then(response => {
+      if (response.ok) {
+        // Se a resposta for bem-sucedida, redireciona o navegador para o arquivo baixado
+        response.blob().then(blob => {
+          const url = window.URL.createObjectURL(blob);
+          const a = document.createElement('a');
+          a.href = url;
+          a.download = 'relatorio.pdf';
+          a.click();
+          window.URL.revokeObjectURL(url);
+        });
+      } else {
+        console.error('Erro ao gerar o relatório');
+        // Exiba uma mensagem de erro ao usuário, se necessário
+      }
+    })
+    .catch(error => {
+      console.error('Erro ao gerar o relatório:', error);
+      // Exiba uma mensagem de erro ao usuário, se necessário
+    });
+});
+
 const commonOptions = {
     responsive: true,
     plugins: {

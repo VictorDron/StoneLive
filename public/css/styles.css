@@ -228,6 +228,35 @@ nav h1 {
    text-align: center;
 }
 
+.action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 50px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 1%;
+}
+
+.action input {
+
+    width: 20%;
+    height: 60%;
+    color: #5ad15a;
+    background-color: white;
+    border:1px solid #5ad15a; 
+    border-radius: 10px;
+
+}
+
+.action input:hover {
+
+    background-color: #5ad15a;
+    color: white;
+       
+
+}
 
 
 

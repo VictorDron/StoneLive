@@ -58,36 +58,23 @@ try {
 
   //Calculo da média mensal de atendimentos
   function getMonthlyAverage(data) {
-    if (!Array.isArray(data)) {
-      throw new Error('Os dados fornecidos não são um array.');
-    }
     const countsByMonth = {};
-
-    // Agrupar as ocorrências por mês
-    data.forEach(row => {
-      if (!row.date) {
-        throw new Error('A data não está definida para uma linha.');
-      }
-      const date = moment(row.date);
+    for (const row of data) {
+      const date = moment(row.date, 'YYYY-MM-DD');
       const month = date.format('YYYY-MM');
-
       if (!countsByMonth[month]) {
         countsByMonth[month] = 0;
       }
-
       countsByMonth[month]++;
-    });
-
-    // Calcular a média por mês
-    const months = Object.keys(countsByMonth);
+    }
+  
     const monthlyAverages = {};
-    months.forEach(month => {
-      const count = countsByMonth[month];
-      const daysInMonth = moment(month).daysInMonth();
+    for (const [month, count] of Object.entries(countsByMonth)) {
+      const daysInMonth = moment(month + "-01").daysInMonth();
       const average = count / daysInMonth;
       monthlyAverages[month] = average.toFixed(2);
-    });
-
+    }
+  
     return monthlyAverages;
   }
 

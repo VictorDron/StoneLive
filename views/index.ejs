@@ -42,12 +42,12 @@
             </div>
             <!-- Estado com Maior Número de Ocorrências -->
             <div class="resume">
-                <div class="title"><h1>ESTADO MAIS OCORRIDO</h1></div>
+                <div class="title"><h1>ESTADO TOP</h1></div>
                 <h1 class="return"><%=data.mostOccurredState  %></h1>
             </div>
             <!-- Estado com Menor Número de Ocorrências -->
             <div class="resume">
-                <div class="title"><h1>ESTADO MENOS OCORRIDO</h1></div>
+                <div class="title"><h1>ESTADO BOTTOM</h1></div>
                 <h1 class="return"><%= data.leastOccurredState %></h1>
             </div>
         </div>
@@ -85,6 +85,10 @@
     <div class="chart1">
         <canvas id="stateBaseCount" style="width:80%;max-width:100%;height:400px;"></canvas>
         <canvas id="stockByBase" style="width:80%;max-width:100%;height:400px;"></canvas>  
+    </div>
+
+    <div class="action">
+        <input type="button" value="RELATÓRIO" id="gerarRelatorioBtn">
     </div>
 
     <!-- Importando Scripts -->
