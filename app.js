@@ -1,6 +1,11 @@
+//Trazendo o Express para criar o server e suas rotas
 const express = require('express');
 const app = express();
+
+//Trabalho com diretórios
 const fs = require('fs');
+
+//Função para gerar o relatório geral
 const print = require('./analysis/print.js');
 
 // Conexão com os scripts de análise

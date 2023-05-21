@@ -299,6 +299,24 @@ try {
 
   const statePercentages = calculateStatePercentage(stateCounts);
 
+// Calcula a dispersão entre o estado com mais atendimentos e o estado com menos atendimentos
+function calculateStateDispersion(stateCounts) {
+  if (typeof stateCounts !== 'object') {
+    throw new Error('O argumento fornecido não é um objeto.');
+  }
+
+  const occurrences = Object.values(stateCounts);
+  const maxOccurrences = Math.max(...occurrences);
+  const minOccurrences = Math.min(...occurrences);
+
+  const dispersion = maxOccurrences - minOccurrences;
+
+  return dispersion;
+}
+
+const stateDispersion = calculateStateDispersion(stateCounts);
+
+
   module.exports = {
     totalOccurrences,
     totalDays,
@@ -316,6 +334,7 @@ try {
     leastOccurredState,
     stateBaseCount,
     statePercentages,
+    stateDispersion
   };
 } catch (error) {
   console.error('Ocorreu um erro ao processar os dados:', error.message);
